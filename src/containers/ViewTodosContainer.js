@@ -1,6 +1,6 @@
 import ViewTodos from "../components/ViewTodos";
 import { connect } from "react-redux/es/exports";
-import { deleteTodo } from "../services/actions/actions";
+import { deleteTodo, updateTodo } from "../services/actions/actions";
 
 
 
@@ -9,7 +9,8 @@ const mapStateToProps=state=>({
 })
 
 const mapDispatchToProps=dispatch=>({
-  deleteTodoHandler:data=>dispatch(deleteTodo(data))
+  deleteTodoHandler:data=>dispatch(deleteTodo(data)),
+  editHandler:data=>dispatch(updateTodo(data))
 })
 
 
